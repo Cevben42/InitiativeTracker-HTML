@@ -9,19 +9,32 @@
 <body>
   <div class="container">
     <h1>D&D Initiative Tracker</h1>
-    
-    <form id="addForm">
-      <input type="text" id="nameInput" placeholder="Name" required />
-      <input type="number" id="initiativeInput" placeholder="Initiative" required />
-      <button type="submit">Add</button>
-    </form>
 
-    <div id="controls">
-      <button id="nextTurnBtn">Next Turn</button>
-      <button id="resetBtn">Reset</button>
+    <!--Click name in order to display details -->
+    <div id="currentCharacterPanel" class="card hidden">
+      <h2 id="charName">[Select a character]</h2>
+      <div class="hp-control-row">
+        <span>HP: <span id="charHp">--</span></span>
+        <div class="hp-buttons">
+            <input type="number" id="hpAdjustAmount" value="1" min="1" />
+            <button id="hpUp">+</button>
+            <button id="hpDown">--</button>
+        </div>
+        </div>
+      <p>AC: <span id="charAc">--</span></p>
     </div>
 
-    <ul id="combatList"></ul>
+    <!--Contains all the characters in the initiative order -->
+    <ul id="combatList" class="initiative-list"></ul>
+
+    <!--Add Character Function -->
+    <form id="addForm" class="add-form">
+      <input type="text" id="nameInput" placeholder="Name" required />
+      <input type="number" id="initiativeInput" placeholder="Initiative" required />
+      <input type="number" id="hpInput" placeholder="HP" required />
+      <input type="number" id="acInput" placeholder="AC" required />
+      <button type="submit">Add Character</button>
+    </form>
   </div>
 
   <script src="script.js"></script>
