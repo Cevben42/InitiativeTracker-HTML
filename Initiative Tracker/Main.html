@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>D&D Initiative Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>D&D Initiative Tracker</h1>
+    
+    <form id="addForm">
+      <input type="text" id="nameInput" placeholder="Name" required />
+      <input type="number" id="initiativeInput" placeholder="Initiative" required />
+      <button type="submit">Add</button>
+    </form>
+
+    <div id="controls">
+      <button id="nextTurnBtn">Next Turn</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <ul id="combatList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
