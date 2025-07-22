@@ -1,3 +1,4 @@
+//Set the needed variables
 let combatants = [];
 let selectedCharacterIndex = null;
 
@@ -16,6 +17,7 @@ const hpUp = document.getElementById("hpUp");
 const hpDown = document.getElementById("hpDown");
 const hpAdjustAmount = document.getElementById("hpAdjustAmount");
 
+//Functionality to character creator
 addForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
