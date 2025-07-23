@@ -1,4 +1,3 @@
-//Set the needed variables
 let combatants = [];
 let selectedCharacterIndex = null;
 
@@ -17,7 +16,15 @@ const hpUp = document.getElementById("hpUp");
 const hpDown = document.getElementById("hpDown");
 const hpAdjustAmount = document.getElementById("hpAdjustAmount");
 
-//Functionality to character creator
+const terrainList = ["Muddy", "Beach", "Snow", "Grassy Plains", "Ship", "Ocean", "Forest", "Rocky"];
+let currentTerrainIndex = 3; // Default to "Grassy Plains"
+
+const menuToggle = document.getElementById("menuToggle");
+const menuPanel = document.getElementById("menuPanel");
+const terrainDisplay = document.getElementById("currentTerrain");
+const changeTerrainBtn = document.getElementById("changeTerrainBtn");
+
+
 addForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -120,4 +127,13 @@ hpDown.addEventListener("click", () => {
   const amount = parseInt(hpAdjustAmount.value) || 1;
   combatants[selectedCharacterIndex].hp -= amount;
   updateCurrentPanel();
+});
+
+menuToggle.addEventListener("click", () => {
+  menuPanel.classList.toggle("hidden");
+});
+
+changeTerrainBtn.addEventListener("click", () => {
+  currentTerrainIndex = (currentTerrainIndex + 1) % terrainList.length;
+  terrainDisplay.textContent = `Terrain: ${terrainList[currentTerrainIndex]}`;
 });
