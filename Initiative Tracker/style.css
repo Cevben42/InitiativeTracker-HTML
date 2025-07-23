@@ -106,3 +106,50 @@ li .buttons {
   border: none;
   border-radius: 4px;
 }
+
+#menuToggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: #444;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#menuPanel {
+  position: fixed;
+  top: 3.5rem;
+  left: 1rem;
+  background: #2c2c2c;
+  border: 1px solid #555;
+  padding: 0.75rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 999;
+}
+
+#menuPanel button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#menuPanel button:hover {
+  background-color: #777;
+}
+
+#currentTerrain {
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0;
+  color: #ccc;
+}
