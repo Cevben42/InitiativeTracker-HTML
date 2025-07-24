@@ -7,18 +7,27 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Menu Icon -->
-  <div id="menuToggle">
-    ☰
+  <!--Menu Thing-->
+  <div class = "dropdown">
+    <button id = "menuToggle">+</button>
+    <div id = "menuPanel" class = "dropdown-content hidden">
+      <button id = "btn1">Placeholder</button>
+      <button id = "btn2">Placeholder</button>
+
+      <label for="terrainSelect">Change Terrain:</label>
+      <select id="terrainSelect">
+        <option value="Muddy">Muddy</option>
+        <option value="Beach">Beach</option>
+        <option value="Snow">Snow</option>
+        <option value="Grassy Plains">Grassy Plains</option>
+        <option value="Ship">Ship</option>
+        <option value="Ocean">Ocean</option>
+        <option value="Forest">Forest</option>
+        <option value="Rocky">Rocky</option>
+      </select>
+      </div>
   </div>
   <div class="container">
-  <!-- Hidden Buttons Panel -->
-  <div id="menuPanel" class="hidden">
-    <button id="btn1">Placeholder 1</button>
-    <button id="btn2">Placeholder 2</button>
-    <button id="changeTerrainBtn">Change Terrain</button>
-  </div>
-  
     <h1>D&D Initiative Tracker</h1>
     <p id="currentTerrain">Terrain: Grassy Plains</p>
 
@@ -48,6 +57,7 @@
       <button type="submit">Add Character</button>
     </form>
   </div>
+  </body>
 
   <script src="script.js"></script>
 </body>
