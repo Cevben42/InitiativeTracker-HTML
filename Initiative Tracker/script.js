@@ -22,7 +22,23 @@ let currentTerrainIndex = 3; // Default to "Grassy Plains"
 const menuToggle = document.getElementById("menuToggle");
 const menuPanel = document.getElementById("menuPanel");
 const terrainDisplay = document.getElementById("currentTerrain");
-const changeTerrainBtn = document.getElementById("changeTerrainBtn");
+const terrainSelect = document.getElementById("terrainSelect");
+
+function toggleMenu() {
+  const isHidden = menuPanel.classList.contains("hidden");
+
+  if (isHidden) {
+    menuPanel.classList.remove("menuToggle");
+  } else {
+    menuPanel.classList.add("menuToggle");
+  }
+}
+
+menuToggle.addEventListener("click", toggleMenu);
+
+terrainSelect.addEventListener("change", () => {
+  terrainDisplay.textContent = `Terrain: ${terrainSelect.value}`;
+});
 
 
 addForm.addEventListener("submit", (e) => {
